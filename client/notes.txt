@@ -1,0 +1,11 @@
+
+I have used Thompson sampling algorithm for sampling the arms.
+It generates values from a beta distribution with parameters
+no of successes + 1 and no of failures + 1.
+I calculate these values for every arm and select the arm with maximum value to be the next arm to be pulled.
+
+I have used the beta distribution from the open source gsl library and the command used is gsl_ran_beta (gsl_rng *,double,double);
+I get a regret of 12 while running for 5 arms, with Horizon=100, Exploration horizon=0;
+I get a regret of 13 while running for 7 arms, with Horizon=100, Exploration horizon=0;
+
+
